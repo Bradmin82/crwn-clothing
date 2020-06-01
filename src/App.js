@@ -1,10 +1,11 @@
 import React from 'react';
 // import logo from './logo.svg';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
-import { tsPropertySignature } from '@babel/types';
+import ShopPage from './pages/shop/shop.component.jsx';
+// import { tsPropertySignature } from '@babel/types';
 
 const TopicsList = props => {
   return (
@@ -17,6 +18,7 @@ const TopicsList = props => {
 };
 
 const TopicDetail = props => {
+  console.log(props);
   return (
     <div>
       <h1>Topic Detail PAGE: {props.match.params.topicId}</h1>
@@ -27,9 +29,12 @@ const TopicDetail = props => {
 function App() {
   return (
     <div>
-      <Route exact path='/' component={HomePage} />
-      <Route path='/topics' component={TopicsList} />
-      <Route path='/topics/:topicId' component={TopicDetail} />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route exact path='/topics' component={TopicsList} />
+        <Route path='/topics/:topicId' component={TopicDetail} />
+      </Switch>
     </div>
   )
 }
