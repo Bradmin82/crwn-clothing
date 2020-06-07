@@ -1,8 +1,14 @@
 body {
   font-family: 'Open Sans Condensed', sans-serif;
+  padding: 20px 60px;
 }
 .App {
   text-align: center;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
 
 button {
