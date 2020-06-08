@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 button {
   margin: 10px;
   background-color: white;
