@@ -8,6 +8,7 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './header.styles.scss';
 
 const Header = ({ currentUser }) => {
+    console.log('user: ', currentUser);
     return (<div className='header'>
         <Link to="/">
             <Logo className='logo' />
