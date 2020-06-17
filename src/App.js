@@ -51,7 +51,7 @@ class App extends React.Component {
               ...snapShot.data()
             }
           }, () => {
-            console.log(this.state.currentUser);
+            console.log('App.js state: ', this.state.currentUser);
           });
         });
       } else {
